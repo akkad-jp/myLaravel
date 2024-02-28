@@ -1,0 +1,47 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API Example",
+        "description": "Api",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost",
+            "description": "OpenApi host"
+        }
+    ],
+    "paths": {
+        "/api/hoge": {
+            "get": {
+                "tags": [
+                    "MyTest"
+                ],
+                "summary": "MyTest index",
+                "operationId": "0cf9fef7e49790853103877aada1af02",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "created_at": {
+                "description": "Created at",
+                "type": "string",
+                "format": "date-time",
+                "example": "2024-01-02T12:34:56"
+            }
+        },
+        "securitySchemes": {
+            "BearerAuth": {
+                "type": "apiKey",
+                "name": "api_token",
+                "in": "header"
+            }
+        }
+    }
+}
