@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Api\MyTestController;
+use App\Http\Controllers\Api\V1\MyTestController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,5 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::controller(MyTestController::class)->group(function () {
-    Route::get('/hoge', 'index')->name('api.mytest.hoge');
+    Route::get('/mytest', 'index');
 });
