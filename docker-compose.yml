@@ -1,5 +1,5 @@
 services:
-    laravel.app:
+    laravel.test:
         build:
             context: ./vendor/laravel/sail/runtimes/8.3
             dockerfile: Dockerfile
@@ -24,7 +24,7 @@ services:
         depends_on:
             - mysql
             - redis
-            - meilisearch
+            # - meilisearch
             - mailpit
             - selenium
     mysql:
