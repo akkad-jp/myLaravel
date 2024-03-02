@@ -1,16 +1,12 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-
-const message = ref()
-onMounted(() => {
-  message.value = 'index'
-})
+import { Link } from '@inertiajs/vue3'
 </script>
 
 <template>
   <div>
-    {{ message }}
-    <div><router-link :to="{ name: 'myTest'}">myTest</router-link></div>
-    <div><router-link to="/api/documentation">Swagger</router-link></div>
+    Index Page
+  </div>
+  <div>
+    <Link :href="route('mytest.index')">MyTest</Link>
   </div>
 </template>
