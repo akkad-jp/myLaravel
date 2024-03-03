@@ -63,7 +63,11 @@ sail up -d
 ### Laravel 初期設定
 ```
 sail artisan key:generate
+sail artisan migrate
 ```
+### Auth0 の設定
+- 「.auth0.app.json」「.auth0.api.json」をプロジェクトのルートにコピーする。  
+または、docs/環境構築.md に記載の手順に従って作成する。
 
 ### Vue 関連モジュールをインストール
 ```
