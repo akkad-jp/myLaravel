@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import { Link } from '@inertiajs/vue3'
 import axios from 'axios'
 
 const message = ref()
@@ -23,8 +24,6 @@ onMounted(() => {
 <div>
   MyTest
   <div>{{ message }}</div>
-  <router-link
-    :to="{ name: 'index' }"
-  >index</router-link>
+  <Link :href="router('index')">index</Link>
 </div>
 </template>

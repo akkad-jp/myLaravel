@@ -13,12 +13,12 @@ const props = defineProps({
   <h1>Index Page</h1>
   <div>{{ props.message }}</div>
   <ul>
-    <li><Link :href="route('mytest.index')">MyTest</Link></li>
-    <li><a href="./login">Login</a></li>
-    <li><a href="./logout">Logout</a></li>
-    <li><Link href="./private">private</Link></li>
-    <li><Link href="./scope">scope</Link></li>
-    <li><Link href="./colors">colors</Link></li>
+    <li><Link :href="route('mytest.index')" class="mytest-link">MyTest</Link></li>
+    <li><a href="./login" class="mytest-link">Login</a></li>
+    <li><a href="./logout" class="mytest-link">Logout</a></li>
+    <li><Link href="./private" class="mytest-link">private</Link></li>
+    <li><Link href="./scope" class="mytest-link">scope</Link></li>
+    <li><Link href="./colors" class="mytest-link">colors</Link></li>
   </ul>
 
   <h2>Auth0</h2>
