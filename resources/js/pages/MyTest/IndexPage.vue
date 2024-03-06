@@ -13,7 +13,7 @@ const props = defineProps({
 <div>
   <h2>MyTest</h2>
   <div>
-    <Link href="/">Index</Link>
+    <Link href="/" class="mytest-link">Index</Link>
   </div>
   <div>
     {{ props.hoge }}

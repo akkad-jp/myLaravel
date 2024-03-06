@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .mytest-link {
+    @apply underline text-indigo-400 hover:text-red-600;
+  }
+}
