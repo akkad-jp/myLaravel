@@ -38,7 +38,8 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            // 'provider' => 'users',
+            'provider' => 'auth0-provider',
         ],
     ],
 
@@ -60,6 +61,10 @@ return [
     */
 
     'providers' => [
+        'auth0-provider' => [
+            'driver' => 'auth0.provider',
+            'repository' => App\Repositories\UserRepository::class,
+        ],
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
