@@ -1,6 +1,7 @@
 <?php
 
 use Auth0\Laravel\Facade\Auth0;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -87,4 +88,14 @@ Route::middleware('auth')->group(function () {
 
         return response("Hello {$name}! Your favorite color is {$color}.");
     });
+
+    // Stripe
+    Route::post('/user/subscribe', function (Request $request) {
+        $request->user()->newSubscription(
+            'subscription_test_1month',
+            'price_1Ors0yJOe44Ph7upbedHYTHf'
+        )->create($request->paymentMethodId);
+
+        return redirect('/');
+    })->name('subscribe.post');
 });

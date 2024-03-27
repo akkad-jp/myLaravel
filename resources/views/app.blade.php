@@ -6,6 +6,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @inertiaHead
     @routes
+    <script src="https://js.stripe.com/v3/"></script>
   </head>
   <body>
     @inertia
